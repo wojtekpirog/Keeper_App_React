@@ -7,7 +7,5 @@ const rootDiv = document.querySelector("#root");
 const root = createRoot(rootDiv);
 
 root.render(
-  <div>
-    <App />
-  </div>
+  <App />
 );

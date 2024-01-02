@@ -1,8 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  background: #eee;
   font-family: 'Montserrat', sans-serif;
+  padding: 0 16px;
+}
+
+header {
+  display: flex;
+  margin: 0 -16px;
+  padding: 8px;
+  border-bottom: 1px solid #dadce0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+
+.hamburger {
+  margin-right: 10px;
+}
+
+.hamburger img {
+  padding: 6px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.hamburger img:hover {
+  background: #b2b2b2;
+  border-radius: 50%;
+}
+
+header img {
+  margin-right: 6px;
+}
+
+header span {
+  font-size: 22px;
+  font-weight: 400;
+  color: #5f6368;  
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  width: calc(100% - 16px);
+  text-align: center;
+  color: #5f6368;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
 }
 
 .regSign {
   position: relative;
   top: -4px;
+}
+
+.noteContainer {
+  padding: 56px 40px;
+}
+
+.note {
+  width: 25%;
+  border: 2px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.note h1 {
+  font-size: 16px;
+  color: #dadce0;
+}
+
+.note p {
+  padding-top: 12px;
 }
