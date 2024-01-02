@@ -1,3 +1,8 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.regSign {
+  position: relative;
+  top: -4px;
+}
