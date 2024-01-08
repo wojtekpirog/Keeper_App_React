@@ -51,6 +51,44 @@ header h1 {
   align-items: center;
 }
 
+.sideMenu {
+  width: 280px;
+  height: 100vh;
+  list-style: none;
+  background: #eee;
+  position: absolute;
+  top: 63px;
+  left: 0;
+  transition: transform .3s;
+}
+
+.sideMenu a {
+  display: block;
+  text-decoration: none;
+  padding: 16px 30px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin: 5px 0;
+}
+
+.sideMenu span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #202124;  
+}
+
+.sideMenu a:hover {
+  background: #b2b2b2;
+}
+
+.sideMenu a:focus {
+  background: #fbbc04;  
+}
+
+.sideMenuActive {
+  transform: translateX(280px);
+}
+
 footer {
   width: calc(100% - 16px);
   text-align: center;
