@@ -58,12 +58,13 @@ header h1 {
   background: #eee;
   position: absolute;
   top: 63px;
-  left: 0;
-  transition: transform .3s;
+  left: -280px;
+  transition: left .3s;
 }
 
 .sideMenu a {
-  display: block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   padding: 16px 30px;
   border-top-right-radius: 25px;
@@ -85,8 +86,12 @@ header h1 {
   background: #fbbc04;  
 }
 
+.sideMenu img {
+  margin-right: 30px;
+}
+
 .sideMenuActive {
-  transform: translateX(280px);
+  left: 0;
 }
 
 footer {
