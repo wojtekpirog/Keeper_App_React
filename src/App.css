@@ -1,13 +1,31 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+/* Jak ustawić tzw. `sticky footer`: */
+/* 1) Nadaj dla `body` height na `100%` */
+/* 2) Ustaw dla `#root` `min-height` na `100%`, `display` na `flex` i `flex-direction` na `column` */
+/* 3) Ustaw dla `footer` `margin-top` na `auto` */
+
 body {
+  height: 100%;
   background: #eee;
   font-family: 'Montserrat', sans-serif;
   padding: 0 16px;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -100,8 +118,56 @@ header h1 {
   top: -4px;
 }
 
+.noteInputContainer > form {
+  width: 400px; 
+  margin: 0 auto;
+  padding: 10px 15px;     
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3);
+}
+
+.noteInputContainer > form > div:last-child,
+.note > div {
+  text-align: right;
+}
+
+.noteInputContainer input {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 4px;
+  border: none;
+  outline: none;
+}
+
+.noteInputContainer input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.noteInputContainer button,
+.note button {
+  padding: 8px 24px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, .8); 
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .15s ease;
+}
+
+.noteInputContainer button:hover,
+.note button:hover {
+  background: #b2b2b2;
+}
+
+.noteInputContainer,
 .noteContainer {
-  padding: 56px 40px;
+  padding: 28px 40px 0;
 }
 
 .note {
@@ -112,22 +178,24 @@ header h1 {
   margin: 10px;
 }
 
+.note h1,
+.note p {
+  margin-bottom: 12px;
+}
+
 .note h1 {
   font-size: 16px;
   font-weight: 500;
-  color: #202124;
 }
 
-.note p {
-  padding-top: 12px;
+.note button {
+  background-color: #eee;
 }
 
 footer {
-  /* width: calc(100% - 16px); */
-  width: 100%;
+  margin-top: auto;
+  width: calc(100% - 16px);
   text-align: center;
   color: #5f6368;
-  padding: 8px;
-  /* position: absolute; */
-  /* bottom: 0; */
+  padding: 8px 0;
 }

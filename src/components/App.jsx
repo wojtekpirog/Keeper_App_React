@@ -5,11 +5,11 @@ import NoteContainer from "./NoteContainer";
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Header />
       <NoteContainer />
       <Footer />
-    </div>
+    </React.Fragment>
   );
 }
 
