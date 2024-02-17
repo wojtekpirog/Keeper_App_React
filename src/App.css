@@ -95,15 +95,6 @@ header h1 {
   left: 0;
 }
 
-footer {
-  width: calc(100% - 16px);
-  text-align: center;
-  color: #5f6368;
-  padding: 8px;
-  position: absolute;
-  bottom: 0;
-}
-
 .regSign {
   position: relative;
   top: -4px;
@@ -114,17 +105,29 @@ footer {
 }
 
 .note {
-  width: 25%;
+  width: 340px;
   border: 2px solid #e0e0e0;
   border-radius: 14px;
   padding: 12px 16px;
+  margin: 10px;
 }
 
 .note h1 {
   font-size: 16px;
-  color: #dadce0;
+  font-weight: 500;
+  color: #202124;
 }
 
 .note p {
   padding-top: 12px;
+}
+
+footer {
+  /* width: calc(100% - 16px); */
+  width: 100%;
+  text-align: center;
+  color: #5f6368;
+  padding: 8px;
+  /* position: absolute; */
+  /* bottom: 0; */
 }
