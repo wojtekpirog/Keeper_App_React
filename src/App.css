@@ -132,15 +132,18 @@ header h1 {
   text-align: right;
 }
 
-.noteInputContainer input {
+.noteInputContainer input,
+.noteInputContainer textarea {
   width: 100%;
   padding: 4px;
   margin-bottom: 4px;
   border: none;
   outline: none;
+  resize: none;
 }
 
-.noteInputContainer input::placeholder {
+.noteInputContainer input::placeholder,
+.noteInputContainer textarea::placeholder {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }

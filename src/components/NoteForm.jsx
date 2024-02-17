@@ -1,41 +1,49 @@
 import React, { useState } from "react";
 
 function NoteForm({ onSubmit }) {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [note, setNote] = useState({
+    title: "",
+    content: ""
+  });
 
-  function changeTitle(e) {
-    setTitle(e.target.value);
-  }
-
-  function changeContent(e) {
-    setContent(e.target.value);
+  function changeNote(event) {
+    const { name, value } = event.target;
+    setNote(prevNote => {
+      return {
+        ...prevNote,
+        [name]: value
+      }
+    });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    onSubmit(title, content);
-    setTitle("");
-    setContent("");
+    onSubmit(note);
+    setNote({
+      title: "",
+      content: ""
+    });
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <input 
-          type="text" 
+          type="text"
+          name="title" 
           placeholder="Title"
-          value={title}
-          onChange={changeTitle}
+          value={note.title}
+          onChange={changeNote}
           required
         />      
       </div>
       <div>
-        <input 
-          type="text"
+        <textarea
+          name="content"
           placeholder="Create a note..."
-          value={content}
-          onChange={changeContent}
+          value={note.content}
+          onChange={changeNote}
+          rows="3"
           required
         />      
       </div>

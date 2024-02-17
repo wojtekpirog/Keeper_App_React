@@ -6,8 +6,10 @@ import NoteForm from "./NoteForm";
 function NoteContainer() {
   const [notes, setNotes] = useState([]);
 
-  function addNote(title, content) {
-    setNotes(prevNotes => [...prevNotes, {title: title, content: content}]);
+  function addNote(note) {
+    setNotes(prevNotes => {
+      return [...prevNotes, note];
+    });
   }
 
   function deleteNote(id) {
