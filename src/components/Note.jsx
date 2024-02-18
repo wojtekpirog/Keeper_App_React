@@ -8,14 +8,14 @@ function Note({id, title, content, deleteFunction}) {
   }
 
   return (
-    <div className="note" >
+    <div className="note">
       <h1>{title}</h1>
       <p>{content}</p>
       <div>
         <button type="button" onClick={deleteNote}>
           <DeleteIcon htmlColor="#fbbc04" />
           Delete
-        </button>        
+        </button>
       </div>
     </div>
   );
