@@ -1,7 +1,9 @@
-function HamburgerIcon({img, onClickFn}) {
+import MenuIcon from "@mui/icons-material/Menu";
+
+function HamburgerIcon({ onClickFn }) {
   return (
     <div className="hamburger">
-      <img src={img} alt="hamburger icon" onClick={onClickFn} />
+      <MenuIcon className="menuIcon" onClick={onClickFn} />
     </div>
   );
 }

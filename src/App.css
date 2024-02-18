@@ -36,7 +36,12 @@ header {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 }
 
-.hamburger img {
+.hamburger {
+  margin-right: 6px;
+}
+
+.hamburger > .menuIcon {
+  font-size: 40px;
   padding: 6px;
   position: relative;
   top: 50%;
@@ -45,7 +50,7 @@ header {
   cursor: pointer;
 }
 
-.hamburger img:hover {
+.hamburger > .menuIcon:hover {
   background: #b2b2b2;
   border-radius: 50%;
 }
