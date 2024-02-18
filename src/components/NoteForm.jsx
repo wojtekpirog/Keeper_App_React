@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddIcon from "@mui/icons-material/Add";
 
 function NoteForm({ onSubmit }) {
   const [note, setNote] = useState({
@@ -48,7 +49,10 @@ function NoteForm({ onSubmit }) {
         />      
       </div>
       <div>
-        <button type="submit">Create</button>        
+        <button type="submit">
+          <AddIcon htmlColor="#fbbc04" />
+          Create
+        </button>        
       </div>  
     </form>
   )

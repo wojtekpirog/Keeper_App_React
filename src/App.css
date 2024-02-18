@@ -36,10 +36,6 @@ header {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 }
 
-.hamburger {
-  margin-right: 10px;
-}
-
 .hamburger img {
   padding: 6px;
   position: relative;
@@ -60,7 +56,7 @@ header img {
 
 header span {
   font-size: 22px;
-  padding-left: 4px;
+  margin-left: 6px;
   font-weight: 500;
   color: #5f6368;  
 }
@@ -150,7 +146,9 @@ header h1 {
 
 .noteInputContainer button,
 .note button {
-  padding: 8px 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
   background-color: #fff;
   color: rgba(0, 0, 0, .8); 
   border: none;

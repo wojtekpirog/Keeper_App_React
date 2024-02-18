@@ -1,7 +1,9 @@
-function AppLogo({img}) {
+import StickyNote2Icon from "@mui/icons-material/StickyNote2";
+
+function AppLogo() {
   return (
     <h1>
-      <img src={img} alt="stickies fill" />
+      <StickyNote2Icon htmlColor="#fbbc04" fontSize="large" />
       <span>Keep</span>
     </h1>
   );

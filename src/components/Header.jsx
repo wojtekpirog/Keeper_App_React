@@ -3,7 +3,6 @@ import MenuOption from "./MenuOption";
 import HamburgerIcon from "./HamburgerIcon";
 import AppLogo from "./AppLogo";
 import menuOptions from "../assets/data/menuOptions";
-import appLogo from "../assets/images/stickies-fill.svg";
 import hamburgerIcon from "../assets/images/list.svg";
 
 function Header() {
@@ -16,7 +15,7 @@ function Header() {
   return (
     <header>
       <HamburgerIcon img={hamburgerIcon} onClickFn={toggleMenu} />
-      <AppLogo img={appLogo} />
+      <AppLogo />
       <div className={collapse ? "sideMenu sideMenuActive" : "sideMenu"}>
         {menuOptions.map(menuOption => {
           return (

@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function Note({id, title, content, deleteFunction}) {
 
@@ -11,7 +12,10 @@ function Note({id, title, content, deleteFunction}) {
       <h1>{title}</h1>
       <p>{content}</p>
       <div>
-        <button type="button" onClick={deleteNote}>Delete</button>        
+        <button type="button" onClick={deleteNote}>
+          <DeleteIcon htmlColor="#fbbc04" />
+          Delete
+        </button>        
       </div>
     </div>
   );
