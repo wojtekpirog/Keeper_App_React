@@ -10,16 +10,12 @@ html {
   height: 100%;
 }
 
-/* Jak ustawić tzw. `sticky footer`: */
-/* 1) Nadaj dla `body` height na `100%` */
-/* 2) Ustaw dla `#root` `min-height` na `100%`, `display` na `flex` i `flex-direction` na `column` */
-/* 3) Ustaw dla `footer` `margin-top` na `auto` */
-
 body {
   height: 100%;
   background: #eee;
   font-family: 'Montserrat', sans-serif;
   padding: 0 16px;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
 }
 
 #root {
@@ -29,9 +25,11 @@ body {
 }
 
 header {
+  height: 63px;
   display: flex;
   margin: 0 -16px;
   padding: 8px;
+  background-color: #eee;
   border-bottom: 1px solid #dadce0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 }
@@ -53,10 +51,6 @@ header {
 .hamburger > .menuIcon:hover {
   background: #b2b2b2;
   border-radius: 50%;
-}
-
-header {
-  height: 63px;
 }
 
 header img {
