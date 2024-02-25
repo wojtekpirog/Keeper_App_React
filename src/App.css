@@ -132,20 +132,24 @@ header h1 {
   text-align: right;
 }
 
-.noteInputContainer input,
-.noteInputContainer textarea {
+input[class="noteFormInput"],
+textarea[class="noteFormInput"] {
   width: 100%;
   padding: 4px;
   margin-bottom: 4px;
   border: none;
   outline: none;
-  resize: none;
+  font-family: 'Montserrat', sans-serif;  
 }
 
-.noteInputContainer input::placeholder,
-.noteInputContainer textarea::placeholder {
-  font-family: 'Montserrat', sans-serif;
+input[class="noteFormInput"],
+textarea[class="noteFormInput"]::placeholder {
   font-weight: 500;
+}
+
+textarea[class="noteFormInput"] {
+  font-weight: 400;
+  resize: none;  
 }
 
 .noteInputContainer button,

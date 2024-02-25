@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
-import Fab from "@mui/material/Fab";
 import Zoom from "@mui/material/Zoom";
 
 function NoteForm({ onSubmit }) {
@@ -40,6 +39,7 @@ function NoteForm({ onSubmit }) {
           <input
             type="text"
             name="title"
+            className="noteFormInput"
             placeholder="Title"
             value={note.title}
             onChange={changeNote}
@@ -50,6 +50,7 @@ function NoteForm({ onSubmit }) {
       <div>
         <textarea
           name="content"
+          className="noteFormInput"
           placeholder="Create a note..."
           value={note.content}
           onChange={changeNote}
