@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Tooltip from "@mui/material/Tooltip";
 import AddIcon from "@mui/icons-material/Add";
+import ColorLensIcon from "@mui/icons-material/ColorLens";
 import Zoom from "@mui/material/Zoom";
 
 function NoteForm({ onSubmit }) {
@@ -60,7 +62,14 @@ function NoteForm({ onSubmit }) {
       </div>
       <div>
         <Zoom in={isFormExpanded ? true : false} timeout={500} easing="ease-in-out">
-          <button type="submit">
+          <Tooltip className="tooltip" title="Background color" arrow={true} followCursor>
+            <button type="button">
+              <ColorLensIcon htmlColor="#fff" title="Change color" />
+            </button>            
+          </Tooltip>
+        </Zoom>        
+        <Zoom in={isFormExpanded ? true : false} timeout={500} easing="ease-in-out">
+          <button type="submit" title="Create">
             <AddIcon htmlColor="#fff" />
             Create
           </button>
