@@ -3,17 +3,20 @@ import Tooltip from "@mui/material/Tooltip";
 import AddIcon from "@mui/icons-material/Add";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import Zoom from "@mui/material/Zoom";
+import ColorMenu from "./ColorMenu";
 
 function NoteForm({ onSubmit }) {
   const [isFormExpanded, setIsFormExpanded] = useState(false);
+  const [showColorMenu, setShowColorMenu] = useState(false);
   const [note, setNote] = useState({
     title: "",
-    content: ""
+    content: "",
+    color: "#fff"
   });
 
   function changeNote(event) {
     const { name, value } = event.target;
-    setNote(prevNote => {
+    setNote((prevNote) => {
       return {
         ...prevNote,
         [name]: value
@@ -23,6 +26,19 @@ function NoteForm({ onSubmit }) {
 
   function expandForm() {
     setIsFormExpanded(true);
+  }
+
+  function handleColorMenuClick() {
+    setShowColorMenu(!showColorMenu);
+  }
+
+  function handleBackgroundColorChange(backgroundColor) {
+    setNote((prevNote) => {
+      return {
+        ...prevNote,
+        color: backgroundColor
+      }
+    });
   }
 
   function handleSubmit(e) {
@@ -46,7 +62,7 @@ function NoteForm({ onSubmit }) {
             value={note.title}
             onChange={changeNote}
             required
-          />          
+          />
         )}
       </div>
       <div>
@@ -62,12 +78,15 @@ function NoteForm({ onSubmit }) {
       </div>
       <div>
         <Zoom in={isFormExpanded ? true : false} timeout={500} easing="ease-in-out">
-          <Tooltip className="tooltip" title="Background color" arrow={true} followCursor>
-            <button type="button">
+          <Tooltip title="Background color" arrow={true}>
+            <button type="button" onClick={handleColorMenuClick}>
               <ColorLensIcon htmlColor="#fff" title="Change color" />
-            </button>            
+            </button>
           </Tooltip>
-        </Zoom>        
+        </Zoom>
+        {showColorMenu && (
+          <ColorMenu onColorChange={handleBackgroundColorChange} />
+        )}
         <Zoom in={isFormExpanded ? true : false} timeout={500} easing="ease-in-out">
           <button type="submit" title="Create">
             <AddIcon htmlColor="#fff" />
