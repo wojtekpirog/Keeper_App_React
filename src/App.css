@@ -89,6 +89,7 @@ header h1 {
   top: 63px;
   left: -280px;
   transition: left .3s;
+  z-index: 1;
 }
 
 .sideMenu a {
@@ -165,7 +166,7 @@ header h1 {
   background-color: var(--white);
   padding: 8px;
   top: 34px;
-  left: 35px;
+  left: 19px;
   line-height: 0;
   border-radius: 8px;
   box-shadow: 0 0 4px var(--box-shadow-color);
@@ -286,3 +287,43 @@ footer {
   color: var(--darkgray);
   padding: 8px 0;
 }
+
+/* 
+ Stylowanie modala:
+  Modal: 
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+ Overlay (nakładka):
+ .modal-overlay {
+   position: fixed;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, .5);
+   pointer-events: none; --> Udostępnij zdarzenia myszy (pointer-events), gdy nakładka (overlay) jest nieaktywna)
+   transition: 200ms ease-in-out;
+ }
+
+ .modal-overlay.active {
+   pointer-events: all;
+   opacity: 1;
+ }
+*/

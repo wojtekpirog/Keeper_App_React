@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Tooltip from "@mui/material/Tooltip";
+import FormatColorResetIcon from '@mui/icons-material/FormatColorReset';
 
 function ColorOption({ colorInfo, onBackgroundColorChange }) {
   const { hexCode, name } = colorInfo;

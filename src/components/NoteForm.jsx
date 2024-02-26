@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Tooltip from "@mui/material/Tooltip";
-import AddIcon from "@mui/icons-material/Add";
-import ColorLensIcon from "@mui/icons-material/ColorLens";
-import Zoom from "@mui/material/Zoom";
+import ColorLensButton from "./ColorLensButton";
+import CreateNoteButton from "./CreateNoteButton";
 import ColorMenu from "./ColorMenu";
 
 function NoteForm({ onSubmit }) {
@@ -77,22 +75,9 @@ function NoteForm({ onSubmit }) {
         />
       </div>
       <div>
-        <Zoom in={isFormExpanded ? true : false} timeout={500} easing="ease-in-out">
-          <Tooltip title="Background color" arrow={true}>
-            <button type="button" onClick={handleColorMenuClick}>
-              <ColorLensIcon htmlColor="#fff" title="Change color" />
-            </button>
-          </Tooltip>
-        </Zoom>
-        {showColorMenu && (
-          <ColorMenu onColorChange={handleBackgroundColorChange} />
-        )}
-        <Zoom in={isFormExpanded ? true : false} timeout={500} easing="ease-in-out">
-          <button type="submit" title="Create">
-            <AddIcon htmlColor="#fff" />
-            Create
-          </button>
-        </Zoom>
+        <ColorLensButton isFormExpanded={isFormExpanded} OnColorMenuClick={handleColorMenuClick} />
+        {showColorMenu && <ColorMenu onColorChange={handleBackgroundColorChange} />}
+        <CreateNoteButton isFormExpanded={isFormExpanded} />
       </div>
     </form>
   );
