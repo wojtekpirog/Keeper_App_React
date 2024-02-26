@@ -1,5 +1,9 @@
 const colorOptions = [
   {
+    hexCode: "#fff",
+    name: "Default",
+  },
+  {
     hexCode: "#faafa8",
     name: "Coral",
   },
