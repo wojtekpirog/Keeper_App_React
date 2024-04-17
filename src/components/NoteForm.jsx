@@ -75,7 +75,7 @@ function NoteForm({ onSubmit }) {
         />
       </div>
       <div>
-        <ColorLensButton isFormExpanded={isFormExpanded} OnColorMenuClick={handleColorMenuClick} />
+        <ColorLensButton isFormExpanded={isFormExpanded ? true : false} OnColorMenuClick={handleColorMenuClick} iconColor="#fff" />
         {showColorMenu && <ColorMenu onColorChange={handleBackgroundColorChange} />}
         <CreateNoteButton isFormExpanded={isFormExpanded} />
       </div>
